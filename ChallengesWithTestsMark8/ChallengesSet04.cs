@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ChallengesWithTestsMark8
@@ -58,29 +59,8 @@ namespace ChallengesWithTestsMark8
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
-            int smallestNumber = 10;
-
-            if ( number1 < smallestNumber)
-            {
-                smallestNumber = number1;
-            }
-
-            if ( number2 < smallestNumber)
-            {
-                smallestNumber = number2;
-            }
-
-            if (number3 < smallestNumber)
-            {
-                smallestNumber = number3;
-            }
-
-            if (number4 < smallestNumber)
-            {
-                smallestNumber = number4;
-            }
-
-            return smallestNumber;
+            var list = new List<int>() { number1, number2, number3, number4 };
+            return list.Min();
 
         }
              
